@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "nlp-amazon-reviews"
+version = "0.1.0"
+description = ""
+authors = ["Luis Fernando González Garay <luis95.garay@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+scikit-learn = "^1.5.0"
+tensorflow-io-gcs-filesystem = "0.27.0"
+pandas = "^2.2.2"
+nltk = "^3.8.1"
+tensorflow = "2.10.0"
+
+
+[tool.poetry.group.env.dependencies]
+ipykernel = "^6.29.4"
+
+
+[tool.poetry.group.dev.dependencies]
+matplotlib = "^3.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
