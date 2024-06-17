@@ -2,3 +2,6 @@ data/
 poetry.lock
 models/*
 *.pyc
+*.log
+*.env
+*.db

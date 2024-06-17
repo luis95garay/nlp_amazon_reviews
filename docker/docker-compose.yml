@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  sentiment_classification:
+    image: sentiment_classification:latest
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+  frontend:
+    image: frontend:latest
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.frontend
+    ports:
+      - "8501:8501"
+    restart: always
+    depends_on:
+      - sentiment_classification
+
+networks:
+  default:
+    name: $NETWORK_NAME
+    external: true
